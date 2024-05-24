@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "PT Sans", sans-serif;
+}
+body{
+    background-color: #000;
+    color: #eee;
+    font-size: 15px;
+}
+
+header {
+    width: 80%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin: auto;
+}
+header ul a{
+    color: #eee;
+    margin: 30px;
+    font-weight: 200;
+} 
+.container{
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    margin-top: -50px;
+}
+.container .list .list-item {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
+}
+.container .list .list-item img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    filter:brightness(50%)
+}
+
+.container .list .list-item .content{
+    width: 70%;
+    height: 300px;
+    right: 20%;
+    padding-right: 20%;
+    top: 20%;
+    position: absolute;
+    text-shadow: 0 7px 15px #000;
+}
+.container .list .list-item .content h2{
+    font-size: 5em;
+    line-height: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.container .list .list-item .content .description{
+    line-height: 1.5em;
+    font-family: "Exo", sans-serif;
+    font-weight: 500;
+}
+
+.container .thumb{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    display: flex;
+    gap: 20px;
+}
+.container .thumb .list-thumb{
+    height: 190px;
+    width: 130px;
+    position: relative;
+    gap:12px;
+}
+.container .thumb .list-thumb img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    filter: brightness(60%);
+}
+.container .thumb .sub-title{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    text-transform: uppercase;
+    gap: 2px;
+    font-family: "Exo", sans-serif;
+    font-weight: bold;
+}
+
+.container .arrows{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 120px;
+    left: 120px;
+    width: 250px;
+    gap: 20px;
+}
+.container .arrows button{
+    border-radius: 10px;
+    border: none;
+    padding: 12px 17px;
+    background-color: #eee4;
+    color: #eee;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.5em;
+   
+}
+.container .arrows button:hover{
+    background-color: #eee;
+    color: #000;
+    transition: 0.3s;
+}
