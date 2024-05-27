@@ -1,0 +1,107 @@
+/* Responsividade */
+@media (max-width: 1024px) {
+    .container .list .list-item .content {
+        width: 80%;
+        right: 10%;
+        padding-right: 10%;
+        top: 15%;
+    }
+
+    .container .list .list-item .content h2 {
+        font-size: 3em;
+    }
+
+    .container .thumb {
+        bottom: 40px;
+    }
+
+    .container .arrows {
+        bottom: 100px;
+        left: 80px;
+    }
+
+    .container .arrows button {
+        font-size: 1.2em;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    body{
+        overflow: hidden;
+    }
+    header {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    header ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header ul a {
+        margin: 10px 0;
+    }
+
+    .container .list .list-item .content {
+        width: 80%;
+        height: 100%;
+        right: 5%;
+        padding-right: 5%;
+        top: 10%;
+        overflow: hidden;
+    }
+    .container .list .list-item img{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .container .list .list-item .content h2 {
+        font-size: 2em;
+    }
+
+    .container .thumb {
+     display: none;
+    }
+
+    .container .thumb .list-thumb {
+   display: none;
+    }
+
+    .container .arrows {
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        gap: 10px;
+    }
+
+    .container .arrows button {
+        font-size: 2em;
+        padding: 8px 12px;
+    }
+}
+
+/* Acessibilidade */
+a:focus, button:focus {
+    outline: 2px solid #00f;
+}
+
+header ul a {
+    display: inline-block;
+    padding: 5px;
+}
+
+header ul a:hover, header ul a:focus {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+img {
+    alt: ""; /* Add meaningful alt text for each image */
+}
