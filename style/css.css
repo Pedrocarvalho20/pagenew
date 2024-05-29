@@ -128,15 +128,19 @@ main h2{
 /* Estilos específicos para dispositivos móveis */
 @media screen and (max-width: 768px) {
     /* Estilos para dispositivos móveis */
+    body{
+        overflow: auto;
+        transition: none;
+    }
 
-    /* Ajuste para os botões ficarem em coluna */
+   
     .thumb-list {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    /* Espaçamento entre os botões */
+    
     .thumb-list .image-button {
         margin: 10px 0;
         display: block;
@@ -146,7 +150,6 @@ main h2{
         height: 300px;
     }
 
-    /* Estilos para o conteúdo */
     .conteudo {
         display: none;
         position: relative;
@@ -162,19 +165,24 @@ main h2{
         
     }
 
-    /* Estilos para a imagem dentro do conteúdo */
+    
     .conteudo img {
         max-width: 100%;
         height: auto;
         display: block;
         margin: 0 auto;
-        margin-bottom: 20px; /* Espaçamento inferior entre a imagem e o texto */
+        margin-bottom: 20px; 
     }
 
-    /* Estilos para o texto dentro do conteúdo */
+    
     .conteudo p {
-        margin-bottom: 20px; /* Espaçamento inferior entre os parágrafos */
+        margin-bottom: 20px; 
+        font-size: 15px;
+        text-align: left;
     }
+}
+body.no-scroll {
+    overflow: hidden;
 }
 
 
