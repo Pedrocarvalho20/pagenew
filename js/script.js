@@ -1,30 +1,38 @@
-function showContent(id) {
-    // Oculta todos os conteúdos
-    var conteudos = document.querySelectorAll('.conteudo');
-    conteudos.forEach(function (conteudo) {
-        conteudo.style.display = 'none';
-    });
+var currentVisibleId = null;
 
-    // Mostra o conteúdo selecionado
+function toggleContent(id) {
     var conteudo = document.getElementById(id);
-    conteudo.style.display = 'block';
 
-    setTimeout(function() {
+    // Se o conteúdo já está visível, oculte-o
+    if (currentVisibleId === id) {
+        conteudo.style.display = 'none';
+        currentVisibleId = null;
+    } else {
+        // Oculta todos os outros conteúdos
+        var conteudos = document.querySelectorAll('.conteudo');
+        conteudos.forEach(function (c) {
+            c.style.display = 'none';
+            c.classList.remove('show');
+        });
+
+        // Mostra o conteúdo selecionado
+        conteudo.style.display = 'block';
         conteudo.classList.add('show');
-        conteudo.scrollTop = 0; 
+        conteudo.scrollTop = 0;
         window.scrollTo({ top: conteudo.offsetTop, behavior: 'smooth' });
-    }, 10);
+        currentVisibleId = id;
+    }
 }
 
-// Fecha o parágrafo ao clicar em qualquer lugar da tela
+// Fecha o conteúdo ao clicar em qualquer lugar da tela
 document.addEventListener('click', function () {
-    var conteudos = document.querySelectorAll('.conteudo');
-    conteudos.forEach(function (conteudo) {
+    if (currentVisibleId !== null) {
+        var conteudo = document.getElementById(currentVisibleId);
         conteudo.style.display = 'none';
-    });
+        conteudo.classList.remove('show');
+        currentVisibleId = null;
+    }
 });
-
-
 
 // Impede o fechamento ao clicar no botão
 document.querySelectorAll('.image-button').forEach(function (button) {
