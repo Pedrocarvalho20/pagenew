@@ -121,3 +121,67 @@ header ul a{
     color: #000;
     transition: 0.3s;
 }
+/*animação*/
+.container.next .thumb{
+    animation: effecttNextThumb 0.5s linear 1 forwards;
+
+}
+@keyframes effecttNextThumb{
+    from{
+        transform: translateX(200px);
+    }
+}
+.container.next .thumb .list-thumb:nth-child(1){
+    animation: lastThumb 0.5s linear 1 forwards;
+}
+@keyframes lastThumb{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+
+.container .list .list-item:nth-last-child(1) .content .title,
+.container .list .list-item:nth-last-child(1) .content .description{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards ;
+}
+@keyframes showContent{
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+.container .list .list-item:nth-last-child(1) .content .title{
+    animation-delay: 1.3s;
+}
+.container .list .list-item:nth-last-child(1) .content .description{
+    animation-delay: 1.5s ;
+}
+
+.container.next .list .list-item:nth-child(1) img{
+    width: 150px;
+    height: 210px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: fadeIn 0.5s linear 1 forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.list-item {
+    animation: fadeIn 1s  linear 1 forwards;
+}
