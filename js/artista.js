@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
     listItems.forEach((item, index) => {
         setTimeout(() => {
             item.classList.add("fadeIn");
-        }, index * 200); // Atraso entre cada item para animação em cascata
+        }, index * 10); // Atraso entre cada item para animação em cascata
     });
 
     // Animação de saída ao clicar no botão "back"
@@ -43,12 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
         listItems.forEach((item, index) => {
             setTimeout(() => {
                 item.classList.add("fade-out");
-            }, index * 200); // Atraso entre cada item para animação em cascata
+            }, index * 10); // Atraso entre cada item para animação em cascata
         });
-
-        // Redirecionar ou realizar alguma ação após a animação de saída
-        setTimeout(() => {
-            window.history.back(); // Voltar para a página anterior
-        }, listItems.length * 200 + 1000); // Tempo suficiente para a animação de saída concluir
     });
 });
